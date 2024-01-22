@@ -1,0 +1,32 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Workout Plan</title>
+</head>
+<body>
+<h1>Workout Plan</h1>
+<ul>
+{% for exercise in workout_plan %}
+<li>
+<h2>{{ exercise.exercise_name }}</h2>
+<video width="320" height="240" controls>
+<source src="{{ exercise.video_url }}" type="video/mp4">
+</video>
+<p>{{ exercise.description }}</p>
+<p><b>Modifications:</b> {{ exercise.modifications }}</p>
+<input type="checkbox" name="completed_workouts" value="{{ exercise.exercise_name }}">
+<label for="completed_workouts">Mark as completed</label>
+</li>
+{% endfor %}
+</ul>
+<form action="/update_progress" method="POST">
+<input type="submit" value="Update Progress">
+</form>
+</body>
+</html>
+
+
+
