@@ -1,0 +1,31 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fitness App</title>
+</head>
+<body>
+<h1>Fitness App</h1>
+<form action="/generate_workout_plan" method="POST">
+<label for="fitness_level">Fitness Level:</label>
+<select name="fitness_level">
+<option value="beginner">Beginner</option>
+<option value="intermediate">Intermediate</option>
+<option value="advanced">Advanced</option>
+</select>
+<br>
+<label for="desired_outcomes">Desired Outcomes:</label>
+<input type="text" name="desired_outcomes" placeholder="What are your fitness goals?">
+<br>
+<label for="physical_limitations">Physical Limitations:</label>
+<input type="text" name="physical_limitations" placeholder="Do you have any injuries or conditions that limit your workouts?">
+<br>
+<input type="submit" value="Generate Workout Plan">
+</form>
+</body>
+</html>
+
+
+
